@@ -1,0 +1,19 @@
+body {
+  font-family: Arial;
+}
+
+h1 {
+  text-align: center;
+  margin: 0, auto;
+}
+
+.button {
+  justify-content: center;
+  margin: 10px;
+  text-align: center;
+}
+
+.button button {
+  margin: 10px;
+  padding: 10px;
+}

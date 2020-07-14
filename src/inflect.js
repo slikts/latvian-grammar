@@ -8,37 +8,44 @@ const inflect = (word, gender = genders.masculine) => {
   const base = word.slice(0, -suffix.length);
   const palatalized = palatalize(word, declension);
 
-  const inflections = Object.fromEntries(
-    Object.entries(pluralInflections[declensionCase])
-      .map(([case_, suffix_]) => {
-        const fullCase = `${case_}-plural`;
-        const base_ = palatalizable[declensionCase].includes(fullCase)
-          ? palatalized
-          : base;
+  const Word = (case_, count, suffix_) => {
+    const fullCase = `${case_}-${count}`;
+    let base_ = palatalizable[declensionCase].includes(fullCase)
+      ? palatalized
+      : base;
 
-        return [fullCase, `${base_}${suffix_}`];
-      })
-      .concat(
-        Object.entries(singularInflections[declensionCase]).map(
-          ([case_, suffix_]) => {
-            const fullCase = `${case_}-singular`;
-            const base_ = palatalizable[declensionCase].includes(fullCase)
-              ? palatalized
-              : base;
+    if (case_ === "instrumental") {
+      base_ = `ar ${base_}`;
+    }
 
-            return [fullCase, `${base_}${suffix_}`];
-          }
-        )
-      )
+    return [case_, `${base_}${suffix_}`];
+  };
+
+  const plural = mapObject(
+    pluralInflections[declensionCase],
+    ([case_, suffix_]) => {
+      return Word(case_, "plural", suffix_);
+    }
+  );
+  const singular = mapObject(
+    singularInflections[declensionCase],
+    ([case_, suffix_]) => {
+      return Word(case_, "singular", suffix_);
+    }
   );
 
   return {
     declension,
-    inflections,
+    inflections: {
+      plural,
+      singular,
+    },
   };
 };
-
 export default inflect;
+
+const mapObject = (object, fn) =>
+  Object.fromEntries(Object.entries(object).map(fn));
 
 const Suffixes = (
   nominative,

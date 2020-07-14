@@ -22,33 +22,3 @@ Object {
   },
 }
 `;
-
-exports[`inflects 2`] = `
-Object {
-  "declension": Object {
-    "declensionCase": 2,
-    "exception": true,
-    "suffix": "s",
-  },
-  "inflections": Object {
-    "plural": Object {
-      "accusative": "mēnešus",
-      "dative": "mēnešiem",
-      "genitive": "mēnešu",
-      "instrumental": "ar mēnešiem",
-      "locative": "mēnešos",
-      "nominative": "mēneši",
-      "vocative": "mēneši",
-    },
-    "singular": Object {
-      "accusative": "mēnesi",
-      "dative": "mēnesim",
-      "genitive": "mēneša",
-      "instrumental": "ar mēnesi",
-      "locative": "mēnesī",
-      "nominative": "mēnesis",
-      "vocative": "mēnesi",
-    },
-  },
-}
-`;

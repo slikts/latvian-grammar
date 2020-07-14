@@ -1,14 +1,14 @@
 import { isVowel, isConsonant } from "./util";
 
-const validate = word => {
+const validate = (word) => {
   const letters = [...word];
 
   const vowelCount = letters
-    .map(x => isVowel(x))
+    .map((x) => isVowel(x))
     .map(Number)
     .reduce(sum);
   const consonantCount = letters
-    .map(x => isConsonant(x))
+    .map((x) => isConsonant(x))
     .map(Number)
     .reduce(sum);
   const otherCount = letters.length - vowelCount - consonantCount;
@@ -32,7 +32,7 @@ const validate = word => {
     valid = ["tu", "es", "šī", "un", "tā"].includes(word);
   }
 
-  if (invalidSuffixes.some(x => word.endsWith(x))) {
+  if (invalidSuffixes.some((x) => word.endsWith(x))) {
     return false;
   }
   if (invalidSuffixLetters.includes(word.substr(-1))) {
@@ -62,5 +62,5 @@ const invalidSuffixes = [
   "st",
   "ūt",
   "vt",
-  "zt"
+  "zt",
 ];

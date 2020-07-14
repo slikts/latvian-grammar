@@ -5,7 +5,7 @@ const palatalize = (word, { declensionCase, suffix }) => {
   if (
     !table[declensionCase] ||
     exceptions[declensionCase].includes(word) ||
-    exceptionSuffixes[declensionCase].some(x => word.endsWith(x))
+    exceptionSuffixes[declensionCase].some((x) => word.endsWith(x))
   ) {
     return base;
   }
@@ -38,7 +38,7 @@ export const table = {
     s: "š",
     z: "ž",
     n: "ņ",
-    l: "ļ"
+    l: "ļ",
   },
   5: {
     sn: "šņ",
@@ -55,7 +55,7 @@ export const table = {
     s: "š",
     z: "ž",
     n: "ņ",
-    l: "ļ"
+    l: "ļ",
   },
   6: {
     sn: "šņ",
@@ -66,8 +66,8 @@ export const table = {
     s: "š",
     z: "ž",
     n: "ņ",
-    l: "ļ"
-  }
+    l: "ļ",
+  },
 };
 
 const entryTable = Object.fromEntries(
@@ -76,7 +76,7 @@ const entryTable = Object.fromEntries(
 
 const exceptionSuffixes = {
   2: ["astis", "jis", "ķis", "ģis", "ris", "skatis"],
-  5: ["aste", "fe", "ģe", "ķe", "mate", "pēde", "ste"]
+  5: ["aste", "fe", "ģe", "ķe", "mate", "pēde", "ste"],
 };
 
 const exceptions = {
@@ -105,7 +105,7 @@ const exceptions = {
     "sarakste",
     "šprote",
     "takse",
-    "tirāde"
+    "tirāde",
   ],
   6: [
     "acs",
@@ -128,8 +128,8 @@ const exceptions = {
     "valsts",
     "vēsts",
     "zoss",
-    "žults"
-  ]
+    "žults",
+  ],
 };
 
 for (const i of Array.from({ length: 6 }, (_, i) => i + 1)) {

@@ -1,3 +1,7 @@
+export { default as decline } from "./decline";
+export { default as inflect } from "./inflect";
+export { palatalize } from "./palatalize";
+
 // const ex1 = [
 //   "asins",
 //   "krāsns",

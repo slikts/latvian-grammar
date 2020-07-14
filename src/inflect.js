@@ -34,7 +34,7 @@ const inflect = (word, gender = genders.masculine) => {
 
   return {
     declension,
-    inflections
+    inflections,
   };
 };
 
@@ -55,7 +55,7 @@ const Suffixes = (
   accusative,
   instrumental,
   locative,
-  vocative
+  vocative,
 });
 
 const caseKeys = [
@@ -65,13 +65,13 @@ const caseKeys = [
   "accusative",
   "instrumental",
   "locative",
-  "vocative"
+  "vocative",
 ];
 
 const palatalizable = {
-  2: ["genitive-singular", ...caseKeys.map(x => `${x}-plural`)],
+  2: ["genitive-singular", ...caseKeys.map((x) => `${x}-plural`)],
   5: ["genitive-plural"],
-  6: ["genitive-plural"]
+  6: ["genitive-plural"],
 };
 
 for (const i of Array.from({ length: 6 }, (_, i) => i + 1)) {
@@ -86,7 +86,7 @@ const singularInflections = {
   3: Suffixes("us", "us", "um", "u", "u", "ū", "us"),
   4: Suffixes("a", "as", "ai", "u", "u", "ā", "a"),
   5: Suffixes("e", "es", "ei", "i", "i", "ē", "e"),
-  6: Suffixes("s", "s", "ij", "i", "i", "ī", "s")
+  6: Suffixes("s", "s", "ij", "i", "i", "ī", "s"),
 };
 
 const pluralMasculine = Suffixes("i", "u", "iem", "us", "iem", "os", "i");
@@ -96,5 +96,5 @@ const pluralInflections = {
   3: pluralMasculine,
   4: Suffixes("as", "u", "ām", "as", "ām", "ās", "as"),
   5: Suffixes("es", "u", "ēm", "es", "ēm", "ēs", "es"),
-  6: Suffixes("is", "u", "īm", "is", "īm", "īs", "is")
+  6: Suffixes("is", "u", "īm", "is", "īm", "īs", "is"),
 };

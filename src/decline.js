@@ -31,7 +31,7 @@ export default decline;
 export const Declension = (declensionCase, suffix, exception = false) => ({
   declensionCase,
   suffix,
-  exception
+  exception,
 });
 
 export const masculineSuffixes = {
@@ -40,12 +40,12 @@ export const masculineSuffixes = {
   is: 2,
   us: 3,
   a: 4,
-  e: 5
+  e: 5,
 };
 export const feminineSuffixes = {
   a: 4,
   e: 5,
-  s: 6
+  s: 6,
 };
 
 export const masculineExceptions2 = [
@@ -56,5 +56,5 @@ export const masculineExceptions2 = [
   "rudens",
   "zibens",
   "suns",
-  "sāls"
+  "sāls",
 ];

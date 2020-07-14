@@ -26,5 +26,7 @@
     "prettier": "2.0.5"
   },
   "keywords": [],
-  "browserslist": "> 0.25%, not dead"
+  "browserslist": "> 0.25%, not dead",
+  "homepage": "https://github.com/slikts/latvian-grammar#readme",
+  "repository": "github:slikts/latvian-grammar"
 }

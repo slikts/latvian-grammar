@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+.App {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.App table {
+  width: 100%;
+  table-layout: fixed;
+  empty-cells: hide;
+}
+td {
+  border: 1px solid #ccc;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

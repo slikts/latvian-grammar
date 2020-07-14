@@ -21,31 +21,33 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="App">
       <h3>
         <code>latvian-grammar</code> demo
       </h3>
       <div>
-        <input value={word} type="text" onChange={handleWordChange} />
-        <div>
-          <label>
-            Masculine
-            <input
-              type="radio"
-              checked={gender === genders.masculine}
-              value="masculine"
-              onChange={handleGenderChange}
-            />
-          </label>
-          <label>
-            Feminine
-            <input
-              type="radio"
-              checked={gender === genders.feminine}
-              value="feminine"
-              onChange={handleGenderChange}
-            />
-          </label>
+        <div class="input">
+          <input value={word} type="text" onChange={handleWordChange} />
+          <div>
+            <label>
+              Masculine
+              <input
+                type="radio"
+                checked={gender === genders.masculine}
+                value="masculine"
+                onChange={handleGenderChange}
+              />
+            </label>
+            <label>
+              Feminine
+              <input
+                type="radio"
+                checked={gender === genders.feminine}
+                value="feminine"
+                onChange={handleGenderChange}
+              />
+            </label>
+          </div>
         </div>
         <Inflect gender={gender} word={word} />
         <p>Syllables: {syllables}</p>

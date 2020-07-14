@@ -1,5 +1,5 @@
 {
-  "name": "latvian-inflections",
+  "name": "latvian-grammar",
   "version": "1.0.0",
   "description": "Latvian grammar library",
   "source": "src/index.js",

@@ -34,5 +34,6 @@
   ],
   "browserslist": "> 0.25%, not dead",
   "homepage": "https://github.com/slikts/latvian-grammar#readme",
-  "repository": "github:slikts/latvian-grammar"
+  "repository": "github:slikts/latvian-grammar",
+  "license": "ISC"
 }

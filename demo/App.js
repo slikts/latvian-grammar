@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useState } from "react";
-import { genders } from "latvian-grammar";
+import { genders, countSyllables } from "latvian-grammar";
 
 import Inflect from "./Inflect";
 
@@ -13,6 +13,13 @@ const App = () => {
   const handleGenderChange = useCallback(
     ({ target: { value } }) => void setGender(genders[value])
   );
+  let syllables;
+  try {
+    syllables = countSyllables(word);
+  } catch (e) {
+    syllables = "?";
+  }
+
   return (
     <div>
       <h3>
@@ -41,6 +48,7 @@ const App = () => {
           </label>
         </div>
         <Inflect gender={gender} word={word} />
+        <p>Syllables: {syllables}</p>
       </div>
       <p>
         <a href="https://github.com/slikts/latvian-grammar">

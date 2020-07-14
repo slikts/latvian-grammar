@@ -4,7 +4,8 @@
   "description": "Demo app",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "private": true,
   "author": "slikts",

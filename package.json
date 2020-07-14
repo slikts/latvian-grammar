@@ -11,6 +11,7 @@
     "test:watch": "jest --watch",
     "lint": "eslint src",
     "build": "microbundle",
+    "build:watch": "microbundle watch",
     "dev": "microbundle watch"
   },
   "dependencies": {},
@@ -26,7 +27,11 @@
     "microbundle": "^0.12.2",
     "prettier": "2.0.5"
   },
-  "keywords": [],
+  "keywords": [
+    "latvian",
+    "grammar",
+    "natural-language"
+  ],
   "browserslist": "> 0.25%, not dead",
   "homepage": "https://github.com/slikts/latvian-grammar#readme",
   "repository": "github:slikts/latvian-grammar"

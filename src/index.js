@@ -1,6 +1,7 @@
-export { default as decline } from "./decline";
-export { default as inflect } from "./inflect";
-export { palatalize } from "./palatalize";
+// export { default as decline, Declension } from "./decline";
+// export { default as inflect } from "./inflect";
+// export { default as palatalize } from "./palatalize";
+// export * from "./util";
 
 // const ex1 = [
 //   "asins",

@@ -1,11 +1,17 @@
 {
   "name": "latvian-inflections",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "description": "Latvian grammar library",
+  "source": "src/index.js",
+  "main": "dist/latvian-grammar.js",
+  "module": "dist/latvian-grammar.module.js",
+  "unpkg": "dist/latvian-grammar.umd.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint src"
+    "test:watch": "jest --watch",
+    "lint": "eslint src",
+    "build": "microbundle",
+    "dev": "microbundle watch"
   },
   "dependencies": {},
   "devDependencies": {
@@ -16,6 +22,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.1.0",
+    "microbundle": "^0.12.2",
     "prettier": "2.0.5"
   },
   "keywords": [],

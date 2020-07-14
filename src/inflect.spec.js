@@ -1,5 +1,5 @@
 import inflect from "./inflect";
 
 it("inflects", () => {
-  // expect(inflect("mēness")).toMatchSnapshot();
+  expect(inflect("mēness").inflections).toMatchSnapshot();
 });

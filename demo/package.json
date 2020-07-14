@@ -1,0 +1,21 @@
+{
+  "name": "latvian-grammar-demo",
+  "version": "1.0.0",
+  "description": "Demo app",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "private": true,
+  "author": "slikts",
+  "license": "ISC",
+  "dependencies": {
+    "latvian-grammar": "file:.."
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

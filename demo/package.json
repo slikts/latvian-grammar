@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "rm -rf dist && parcel build  index.html --public-url ."
   },
   "private": true,
   "author": "slikts",

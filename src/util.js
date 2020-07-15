@@ -7,7 +7,7 @@ export const isConsonant = (letter) => consonants.includes(letter);
 export const consonants = "bBcCčČdDfFgGģĢhHjJkKķĶlLļĻmMnNņŅpPrRŗŖsSšŠtTvVzZžŽ";
 
 export const genders = {
-  masculine: Symbol("masculine"),
-  feminine: Symbol("feminine"),
+  masculine: "masculine",
+  feminine: "feminine",
   // neuter: Symbol("neuter")
 };

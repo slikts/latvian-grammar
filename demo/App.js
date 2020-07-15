@@ -4,8 +4,8 @@ import { genders, countSyllables } from "latvian-grammar";
 import Inflect from "./Inflect";
 
 const App = () => {
-  const [word, setWord] = useState("lācis");
-  const [gender, setGender] = useState(genders.masculine);
+  const [word, setWord] = useState("Cēsis");
+  const [gender, setGender] = useState(genders.feminine);
   const handleWordChange = useCallback(
     ({ target: { value } }) =>
       void setWord(value.replace(/[^a-zA-Zā-žĀ-Ž]/g, ""))
@@ -26,7 +26,7 @@ const App = () => {
         <code>latvian-grammar</code> demo
       </h3>
       <div>
-        <div class="input">
+        <div className="input">
           <input value={word} type="text" onChange={handleWordChange} />
           <div>
             <label>

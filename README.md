@@ -2,6 +2,8 @@
 
 A basic Latvian grammar library for JavaScript.
 
+[**Interactive demo**](https://slikts.github.io/latvian-grammar/)
+
 ## Supports
 
 - Inflection

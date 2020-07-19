@@ -65,7 +65,7 @@ const Suffixes = (
   vocative,
 });
 
-const caseKeys = [
+export const caseKeys = [
   "nominative",
   "genitive",
   "dative",

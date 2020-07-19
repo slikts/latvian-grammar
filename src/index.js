@@ -1,5 +1,5 @@
 export { default as decline, Declension } from "./decline";
-export { default as inflect } from "./inflect";
+export { default as inflect, caseKeys as inflections } from "./inflect";
 export { default as palatalize } from "./palatalize";
 export { default as countSyllables } from "./countSyllables";
 export * from "./util";

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`inflects 1`] = `
-Object {
-  "plural": Object {
+{
+  "plural": {
     "accusative": "mēnešus",
     "dative": "mēnešiem",
     "genitive": "mēnešu",
@@ -11,7 +11,7 @@ Object {
     "nominative": "mēneši",
     "vocative": "mēneši",
   },
-  "singular": Object {
+  "singular": {
     "accusative": "mēnesi",
     "dative": "mēnesim",
     "genitive": "mēneša",

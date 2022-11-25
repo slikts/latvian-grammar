@@ -1,6 +1,8 @@
 // http://valoda.ailab.lv/latval/vidusskolai/morfol/lietv-mija.htm
 
-const palatalize = (word, { declensionCase, suffix }) => {
+import { DeclensionType }  from './decline';
+
+const palatalize = (word: string,  { declensionCase, suffix }: DeclensionType) => {
   const base = word.slice(0, -suffix.length);
   if (
     !table[declensionCase] ||
@@ -20,7 +22,7 @@ const palatalize = (word, { declensionCase, suffix }) => {
 export default palatalize;
 
 // NB: relies on key order to be in descending length
-export const table = {
+export const table: Record<number, Record<string, string>> = {
   2: {
     dz: "dž",
     sn: "šņ",
@@ -74,12 +76,12 @@ const entryTable = Object.fromEntries(
   Object.entries(table).map(([k, v]) => [k, Object.entries(v)])
 );
 
-const exceptionSuffixes = {
-  2: ["astis", "jis", "ķis", "ģis", "ris", "skatis"],
-  5: ["aste", "fe", "ģe", "ķe", "mate", "pēde", "ste"],
+const exceptionSuffixes: Record<number, string[]> = {
+  2: ['astis', 'jis', 'ķis', 'ģis', 'ris', 'skatis'],
+  5: ['aste', 'fe', 'ģe', 'ķe', 'mate', 'pēde', 'ste'],
 };
 
-const exceptions = {
+const exceptions: Record<number, string[]> = {
   2: ["tētis", "viesis"],
   5: [
     "apaļmute",

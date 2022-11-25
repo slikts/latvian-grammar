@@ -2,9 +2,9 @@
 
 import { genders } from "./util";
 
-const decline = (word, gender = genders.masculine) => {
-  const suffix1 = word.substr(-1);
-  const suffix2 = word.substr(-2);
+const decline = (word: string, gender = genders.masculine) => {
+  const suffix1 = word.substring(-1);
+  const suffix2 = word.substring(-2);
 
   if (gender === genders.masculine) {
     // Handle exceptions
@@ -28,13 +28,16 @@ const decline = (word, gender = genders.masculine) => {
 
 export default decline;
 
-export const Declension = (declensionCase, suffix, exception = false) => ({
+export const Declension = (declensionCase: number, suffix: string, exception = false) => ({
   declensionCase,
   suffix,
   exception,
 });
 
-export const masculineSuffixes = {
+export type DeclensionType = ReturnType<typeof Declension>
+
+// TODO: remove Record
+export const masculineSuffixes: Record<string, number> = {
   s: 1,
   š: 1,
   is: 2,
@@ -42,7 +45,7 @@ export const masculineSuffixes = {
   a: 4,
   e: 5,
 };
-export const feminineSuffixes = {
+export const feminineSuffixes: Record<string, number> = {
   a: 4,
   e: 5,
   s: 6,

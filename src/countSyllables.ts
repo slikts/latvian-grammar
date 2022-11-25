@@ -1,6 +1,6 @@
 import { isVowel } from "./util";
 
-const countSyllables = (word) => {
+const countSyllables = (word: string) => {
   const letters = [...word].map(isVowel);
   let count = letters[0] ? 1 : 0;
   void letters.reduce((a, b) => {

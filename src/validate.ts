@@ -1,6 +1,6 @@
 import { isVowel, isConsonant } from "./util";
 
-const validate = (word) => {
+const validate = (word: string) => {
   const letters = [...word];
 
   const vowelCount = letters
@@ -35,7 +35,7 @@ const validate = (word) => {
   if (invalidSuffixes.some((x) => word.endsWith(x))) {
     return false;
   }
-  if (invalidSuffixLetters.includes(word.substr(-1))) {
+  if (invalidSuffixLetters.includes(word.substring(-1))) {
     return false;
   }
 
@@ -44,7 +44,7 @@ const validate = (word) => {
 
 export default validate;
 
-const sum = (a, b) => a + b;
+const sum = (a: number, b: number) => a + b;
 
 const invalidSuffixLetters = "bBcCčČdDfFgGģĢhHjJkKķĶlLļĻmMnNņŅpPqQrRŗŖtTvVzZžŽ";
 const invalidSuffixes = [

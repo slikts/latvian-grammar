@@ -46,8 +46,10 @@ const inflect = (word: string, gender = genders.masculine) => {
 };
 export default inflect;
 
-// TODO: types
-const mapObject = (object: any, fn: any) => Object.fromEntries(Object.entries(object).map(fn) as any);
+const mapObject = <A, B>(
+  object: Record<string, A>,
+  fn: (value: [string, A], index: number) => [string, B],
+): Record<string, B> => Object.fromEntries(Object.entries(object).map(fn));
 
 const Suffixes = (
   nominative: string,

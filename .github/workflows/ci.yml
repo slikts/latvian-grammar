@@ -28,6 +28,9 @@ jobs:
       - name: Lint
         run: yarn lint
 
+      - name: Prettier
+        run: yarn prettier --check .
+
       - name: Build
         run: yarn build
 

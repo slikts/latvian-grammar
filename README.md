@@ -1,5 +1,7 @@
 # latvian-grammar
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 A basic Latvian grammar library for JavaScript. Latvian is a highly-inflective Indo-European language, and a particular use case for automating inflection is to generate search queries, since search tools often don't support inflective languages.
 
 [**Interactive demo**](https://slikts.github.io/latvian-grammar/)

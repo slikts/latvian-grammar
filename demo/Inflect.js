@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react'
 
-import { inflect } from "latvian-grammar";
+import { inflect } from 'latvian-grammar'
 
 const Inflect = ({ word, gender }) => {
-  let data;
+  let data
   try {
-    data = inflect(word, gender);
+    data = inflect(word, gender)
   } catch (e) {
-    return <div>{String(e)}</div>;
+    return <div>{String(e)}</div>
   }
-  const { declension, inflections } = data;
+  const { declension, inflections } = data
 
   const rows = Object.entries(inflections.singular).map(([case_, word]) => (
     <tr key={case_}>
@@ -17,7 +17,7 @@ const Inflect = ({ word, gender }) => {
       <td>{word}</td>
       <td>{inflections.plural[case_]}</td>
     </tr>
-  ));
+  ))
 
   return (
     <div>
@@ -39,10 +39,10 @@ const Inflect = ({ word, gender }) => {
         </tbody>
       </table>
     </div>
-  );
-};
+  )
+}
 
-export default React.memo(Inflect);
+export default React.memo(Inflect)
 
 const DataRows = ({ object }) =>
   Object.entries(object).map(([key, value]) => (
@@ -52,11 +52,11 @@ const DataRows = ({ object }) =>
         <Value value={value} />
       </td>
     </tr>
-  ));
+  ))
 
 const Value = ({ value }) => {
-  if (typeof value === "boolean") {
-    return value ? "true" : "false";
+  if (typeof value === 'boolean') {
+    return value ? 'true' : 'false'
   }
-  return value;
-};
+  return value
+}

@@ -8,11 +8,7 @@
       "internalConsoleOptions": "neverOpen",
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "yarn",
-      "args": [
-        "test",
-        "--runInBand",
-        "--watchAll=false",
-      ]
+      "args": ["test", "--runInBand", "--watchAll=false"]
     }
   ]
 }

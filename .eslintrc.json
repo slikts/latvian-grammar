@@ -2,19 +2,16 @@
   "root": true,
   "overrides": [
     {
-      "parser": "@typescript-eslint/parser",
-      "files": ["src/*.ts"]
+      "files": ["src/*.ts"],
+      "parser": "@typescript-eslint/parser"
     },
     {
-      "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
-      ],
-      "files": ["src/*.ts"]
+      "files": ["src/*.ts"],
+      "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"]
     },
     {
-      "extends": ["plugin:jest/recommended"],
-      "files": ["src/*.spec.ts"]
+      "files": ["src/*.spec.ts"],
+      "extends": ["plugin:jest/recommended"]
     }
   ]
 }

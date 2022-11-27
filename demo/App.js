@@ -1,23 +1,23 @@
-import React, { useCallback, useRef, useState } from "react";
-import { genders, countSyllables } from "latvian-grammar";
+import React, { useCallback, useRef, useState } from 'react'
+import { genders, countSyllables } from 'latvian-grammar'
 
-import Inflect from "./Inflect";
+import Inflect from './Inflect'
 
 const App = () => {
-  const [word, setWord] = useState("lācis");
-  const [gender, setGender] = useState(genders.masculine);
+  const [word, setWord] = useState('lācis')
+  const [gender, setGender] = useState(genders.masculine)
   const handleWordChange = useCallback(
     ({ target: { value } }) =>
-      void setWord(value.replace(/[^a-zA-Zā-žĀ-Ž]/g, ""))
-  );
+      void setWord(value.replace(/[^a-zA-Zā-žĀ-Ž]/g, '')),
+  )
   const handleGenderChange = useCallback(
-    ({ target: { value } }) => void setGender(genders[value])
-  );
-  let syllables;
+    ({ target: { value } }) => void setGender(genders[value]),
+  )
+  let syllables
   try {
-    syllables = countSyllables(word);
+    syllables = countSyllables(word)
   } catch (e) {
-    syllables = "?";
+    syllables = '?'
   }
 
   return (
@@ -58,7 +58,7 @@ const App = () => {
         </a>
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

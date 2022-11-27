@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // http://valoda.ailab.lv/latval/vispareji/lgram-ww/nouns.htm
 
 import decline from "./decline";

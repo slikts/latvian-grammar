@@ -1,0 +1,7 @@
+name: Setup
+
+runs:
+  using: 'composite'
+  steps:
+    - run: yarn install --immutable
+      shell: bash

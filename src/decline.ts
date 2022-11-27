@@ -1,12 +1,15 @@
 // https://en.wikipedia.org/wiki/Latvian_declension
 
-import { genders } from "./util";
+import { Gender } from "./util";
 
-const decline = (word: string, gender = genders.masculine) => {
+/**
+ * 
+ */
+const decline = (word: string, gender: Gender = Gender.Masculine) => {
   const suffix1 = word.substring(-1);
   const suffix2 = word.substring(-2);
 
-  if (gender === genders.masculine) {
+  if (gender === Gender.Masculine) {
     // Handle exceptions
     if (masculineExceptions2.includes(word)) {
       return Declension(2, "s", true);
@@ -17,7 +20,7 @@ const decline = (word: string, gender = genders.masculine) => {
   }
 
   const genderSuffixes =
-    gender === genders.masculine ? masculineSuffixes : feminineSuffixes;
+    gender === Gender.Masculine ? masculineSuffixes : feminineSuffixes;
   const suffix = genderSuffixes[suffix2] ? suffix2 : suffix1;
   const declension = genderSuffixes[suffix];
   if (!declension) {

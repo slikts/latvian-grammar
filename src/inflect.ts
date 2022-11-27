@@ -1,8 +1,13 @@
+// http://valoda.ailab.lv/latval/vispareji/lgram-ww/nouns.htm
+
 import decline from "./decline";
 import palatalize from "./palatalize";
-import { genders } from "./util";
+import { Gender } from "./util";
 
-const inflect = (word: string, gender = genders.masculine) => {
+/**
+ *
+ */
+const inflect = (word: string, gender = Gender.Masculine) => {
   const declension = decline(word, gender);
   const { suffix, declensionCase } = declension;
   const base = word.slice(0, -suffix.length);
@@ -24,16 +29,16 @@ const inflect = (word: string, gender = genders.masculine) => {
   const plural = mapObject(
     pluralInflections[declensionCase],
     // TODO
-    ([case_, suffix_]: any) => {
+    ([case_, suffix_]: any): any => {
       return Word(case_, "plural", suffix_);
     }
   );
   const singular = mapObject(
     singularInflections[declensionCase],
     // TODO
-    ([case_, suffix_]: any) => {
-      return Word(case_, "singular", suffix_);
-    }
+    ([case_, suffix_]: any): any => {
+      return Word(case_, 'singular', suffix_);
+    },
   );
 
   return {
@@ -48,7 +53,7 @@ export default inflect;
 
 const mapObject = <A, B>(
   object: Record<string, A>,
-  fn: (value: [string, A], index: number) => [string, B],
+  fn: (x: [string, A]) => [string, B],
 ): Record<string, B> => Object.fromEntries(Object.entries(object).map(fn));
 
 const Suffixes = (
@@ -70,6 +75,16 @@ const Suffixes = (
 });
 
 type CaseKey = typeof caseKeys[number];
+
+export enum Case {
+  Nominative,
+  Genitive,
+  Dative,
+  Accusative,
+  Instrumental,
+  Locative,
+  Vocative,
+}
 
 export const caseKeys = [
   "nominative",

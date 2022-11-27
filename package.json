@@ -2,7 +2,7 @@
   "name": "latvian-grammar",
   "version": "1.0.0",
   "description": "Latvian grammar library",
-  "source": "src/index.js",
+  "source": "src/index.ts",
   "main": "dist/latvian-grammar.js",
   "module": "dist/latvian-grammar.module.js",
   "unpkg": "dist/latvian-grammar.umd.js",

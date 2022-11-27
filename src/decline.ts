@@ -6,8 +6,8 @@ import { Gender } from "./util";
  * 
  */
 const decline = (word: string, gender: Gender = Gender.Masculine) => {
-  const suffix1 = word.substring(-1);
-  const suffix2 = word.substring(-2);
+  const suffix1 = word.slice(-1);
+  const suffix2 = word.slice(-2);
 
   if (gender === Gender.Masculine) {
     // Handle exceptions

@@ -13,7 +13,7 @@ const validate = (word: string) => {
     .reduce(sum);
   const otherCount = letters.length - vowelCount - consonantCount;
 
-  let valid = vowelCount !== 0 && consonantCount !== 0;
+  let valid = !(vowelCount === 0 || consonantCount === 0);
 
   if (otherCount > 0) {
     return false;
@@ -35,7 +35,7 @@ const validate = (word: string) => {
   if (invalidSuffixes.some((x) => word.endsWith(x))) {
     return false;
   }
-  if (invalidSuffixLetters.includes(word.substring(-1))) {
+  if (invalidSuffixLetters.includes(word.slice(-1))) {
     return false;
   }
 

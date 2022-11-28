@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:13.0.4"],\
             ["microbundle", "npm:0.15.1"],\
             ["npm-run-all", "npm:4.1.5"],\
+            ["pinst", "npm:3.0.0"],\
             ["prettier", "npm:2.8.0"],\
             ["ts-node", "virtual:706aaa9c4f05ef55191954f58ccf37a12670c1ac9c4e1392e3bd978fa4789604aefc40d7a425f1444be0435411afb125da58875e87f3bdc14ed2a63bf2951ca7#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
@@ -8091,6 +8092,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:13.0.4"],\
             ["microbundle", "npm:0.15.1"],\
             ["npm-run-all", "npm:4.1.5"],\
+            ["pinst", "npm:3.0.0"],\
             ["prettier", "npm:2.8.0"],\
             ["ts-node", "virtual:706aaa9c4f05ef55191954f58ccf37a12670c1ac9c4e1392e3bd978fa4789604aefc40d7a425f1444be0435411afb125da58875e87f3bdc14ed2a63bf2951ca7#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
@@ -9294,6 +9296,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/pify-npm-5.0.0-f5abe8ab8d-443e3e198a.zip/node_modules/pify/",\
           "packageDependencies": [\
             ["pify", "npm:5.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["pinst", [\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/pinst-npm-3.0.0-5d2b6c1dda-4ae48a6a60.zip/node_modules/pinst/",\
+          "packageDependencies": [\
+            ["pinst", "npm:3.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\

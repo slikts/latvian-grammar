@@ -11,16 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
       - uses: ./.github/actions/setup
-
-      - name: Jest
-        run: yarn test
 
       - uses: ArtiomTr/jest-coverage-report-action@v2
         id: coverage
         with:
           output: report-markdown
+          test-script: yarn test
 
       - uses: marocchino/sticky-pull-request-comment@v2
         with:
@@ -31,14 +28,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
       - uses: ./.github/actions/setup
 
-      - name: Lint
-        run: yarn lint
+      - name: ESLint
+        run: yarn lint:eslint
 
       - name: Prettier
-        run: yarn prettier --check .
+        run: yarn lint:prettier
+
+      - name: Types
+        run: yarn tsc
 
   build:
     name: Build
@@ -46,7 +45,6 @@ jobs:
     needs: [test, lint]
     steps:
       - uses: actions/checkout@v3
-
       - uses: ./.github/actions/setup
 
       - name: Build

@@ -1,5 +1,8 @@
 runs:
   using: composite
   steps:
-    - run: yarn install --immutable
+    - run: |
+        node --version
+        yarn --version
+        yarn install --immutable
       shell: bash

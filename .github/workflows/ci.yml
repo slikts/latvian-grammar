@@ -13,15 +13,16 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup
 
-      - uses: ArtiomTr/jest-coverage-report-action@v2
-        id: coverage
-        with:
-          output: report-markdown
-          test-script: yarn test
+      - run: yarn test
+      # - uses: ArtiomTr/jest-coverage-report-action@v2
+      #   id: coverage
+      #   with:
+      #     output: report-markdown
+      #     test-script: yarn test
 
-      - uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          message: ${{ steps.coverage.outputs.report }}
+      # - uses: marocchino/sticky-pull-request-comment@v2
+      #   with:
+      #     message: ${{ steps.coverage.outputs.report }}
 
   lint:
     name: Lint

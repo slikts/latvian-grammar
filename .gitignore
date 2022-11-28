@@ -1,6 +1,7 @@
 node_modules
 dist
 coverage
+report.json
 .yarn/*
 !.yarn/cache
 !.yarn/patches

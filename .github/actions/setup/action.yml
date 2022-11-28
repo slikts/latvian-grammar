@@ -1,0 +1,9 @@
+runs:
+  using: composite
+  steps:
+    - run: node --version
+      shell: bash
+    - run: yarn --version
+      shell: bash
+    - run: yarn install --immutable
+      shell: bash

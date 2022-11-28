@@ -1,10 +1,17 @@
 {
-  "extends": ["plugin:prettier/recommended"],
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
+  "root": true,
+  "overrides": [
+    {
+      "files": ["src/*.ts"],
+      "parser": "@typescript-eslint/parser"
+    },
+    {
+      "files": ["src/*.ts"],
+      "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"]
+    },
+    {
+      "files": ["src/*.spec.ts"],
+      "extends": ["plugin:jest/recommended"]
     }
-  }
+  ]
 }

@@ -1,5 +1,8 @@
 node_modules
 dist
+coverage
+.eslintcache
+tsconfig.tsbuildinfo
 .yarn/*
 !.yarn/cache
 !.yarn/patches

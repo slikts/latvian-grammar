@@ -1,6 +1,8 @@
 # latvian-grammar
 
-A basic Latvian grammar library for JavaScript.
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+A basic Latvian grammar library for JavaScript. Latvian is a highly-inflective Indo-European language, and a particular use case for automating inflection is to generate search queries, since search tools often don't support inflective languages.
 
 [**Interactive demo**](https://slikts.github.io/latvian-grammar/)
 
@@ -28,6 +30,7 @@ yarn add latvian-grammar
 - [Latvian declension](https://en.wikipedia.org/wiki/Latvian_declension)
 - [Līdzskaņu mija](http://valoda.ailab.lv/latval/vidusskolai/morfol/lietv-mija.htm)
 - [Locīšana un deklinācijas](http://valoda.ailab.lv/latval/vidusskolai/morfol/lietv-dekl.htm)
+- [Research paper about Latvian morphological analysis](https://aclanthology.org/W13-5624.pdf)
 
 ## Alternatives
 
